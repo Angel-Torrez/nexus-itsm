@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class AuditConfig(AppConfig):
-    name = 'audit'
+    """Application configuration for the audit app."""
+    name = "apps.audit"

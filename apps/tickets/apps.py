@@ -2,4 +2,6 @@ from django.apps import AppConfig
 
 
 class TicketsConfig(AppConfig):
-    name = 'tickets'
+    """Configuration for the tickets application."""
+
+    name = "apps.tickets"

@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class SlaConfig(AppConfig):
-    name = 'sla'
+    """Configuration for the SLA app."""
+    name = "apps.sla"

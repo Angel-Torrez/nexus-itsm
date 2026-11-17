@@ -11,11 +11,6 @@ from dotenv import load_dotenv
 # Paths & environment
 # ---------------------------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent.parent
-import os
-import sys
-
-# Agrega esta línea justo debajo de BASE_DIR:
-sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 load_dotenv(BASE_DIR / ".env")
 
