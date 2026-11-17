@@ -35,7 +35,7 @@ if not SECRET_KEY:
         "SECRET_KEY is not set. Define it in your .env file (see .env.example)."
     )
 
-DEBUG = env_bool("DEBUG", default=False)
+DEBUG = env_bool("DEBUG", default=True)
 
 ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", default="localhost,127.0.0.1")
 
@@ -53,6 +53,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     "rest_framework",
+    'drf_spectacular',
 ]
 
 LOCAL_APPS = [
@@ -171,6 +172,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 # ---------------------------------------------------------------------------
 # Logging (structured key=value, console only)
